@@ -1,0 +1,89 @@
+#########
+Memory
+
+Bit: Short for binary digit, a bit is afundamental unit of information in CS that represents a state with one of two values, typically 0 and 1
+  Any data stored in a computer is, at the most basic level, represented in bits. 
+Byte
+A group of eight bits. For example, 01101000 is a byte.
+<p>
+  A single byte can represent up to <b>256</b> data values (<b>2<sup>8</sup></b>).
+</p>
+<p>
+  Since a <b>binary number</b> is a number expressed with only two symbols, like
+  <b>0</b> and <b>1</b>, a byte can effectively represent all of the numbers
+  between 0 and 255, inclusive, in binary format.
+</p>
+<p>
+  The following bytes represent the numbers 1, 2, 3, and 4 in binary format.
+</p>
+<pre>1: 00000001
+2: 00000010
+3: 00000011
+4: 00000100
+</pre>
+</div></div></li><li><h4 class="MeFGWxW4GIK5soMCM_Qe">Fixed-Width Integer</h4><div class="wER9hC6Ayr8OWkXr4hrQ default"><div class="html">
+<p>
+  An integer represented by a fixed amount of <b>bits</b>. For example, a
+  <b>32-bit integer</b> is an integer represented by 32 bits (4 bytes), and a
+  <b>64-bit integer</b> is an integer represented by 64 bits (8 bytes).
+</p>
+<p>
+  The following is the 32-bit representation of the number 1, with clearly
+  separated bytes:
+</p>
+<pre>00000000 00000000 00000000 00000001
+</pre>
+<p>
+  The following is the 64-bit representation of the number 10, with clearly
+  separated bytes:
+</p>
+<pre>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010
+</pre>
+<p>
+  Regardless of how large an integer is, its fixed-width-integer representation
+  is, by definition, made up of a constant number of bits.
+</p>
+<p>
+  It follows that, regardless of how large an integer is, an operation performed
+  on its fixed-width-integer representation consists of a constant number of bit
+  manipulations, since the integer is made up of a fixed number of bits.
+</p>
+</div></div></li><li><h4 class="MeFGWxW4GIK5soMCM_Qe">Memory</h4><div class="wER9hC6Ayr8OWkXr4hrQ default"><div class="html">
+<p>
+  Broadly speaking, memory is the foundational layer of computing, where all
+  data is stored.
+</p>
+<p>
+  In the context of coding interviews, it's important to note the following
+  points:
+</p>
+<ul>
+  <li>Data stored in memory is stored in bytes and, by extension, bits.</li>
+  <li>
+    Bytes in memory can "point" to other bytes in memory, so as to store
+    references to other data.
+  </li>
+  <li>
+    The amount of memory that a machine has is bounded, making it valuable to
+    limit how much memory an algorithm takes up.
+  </li>
+  <li>
+    Accessing a byte or a fixed number of bytes (like 4 bytes or 8 bytes in the
+    case of <b>32-bit</b> and <b>64-bit integers</b>) is an elementary
+    operation, which can be loosely treated as a single unit of operational
+    work.
+  </li>
+</ul>
+</div></div></li></ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
