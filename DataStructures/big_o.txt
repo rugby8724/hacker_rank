@@ -1,0 +1,5 @@
+Big O notation
+
+At its most basic level, Big O notation defines how long it takes an algorithm to run, also called time complexity. It represents how long the runtime for a given algorithm can be as the data grows larger. You may be wondering why anyone cares enough to calculate the speed of an algorithm except to show off, but as programs grow in size, these tiny baby milliseconds add up! Suddenly an algorithm that used to take no time at all starts to bog everything down, so programmers need to know what the “worst-case scenario” is, or rather, the slowest an algorithm will run given a growing list of data.
+
+The O basically stands for order, as in orders of magnitude. Wikipedia adds, “the growth rate of the function is also referred to as the order of the function.” So, for beginners like me, it might be helpful to think of the letter O here as similar to growth rate. People refer to Big O notation as “big o of” or “order of,” and then whatever is inside the parentheses, usually n.
