@@ -4,35 +4,6 @@ class Node:
         self.next = None
 
 
-class Stack:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.top = new_node
-        self.height = 1
-
-    def stack_push(self, value):
-        new_node = Node(value)
-        if self.top == None:
-            self.top = new_node
-        else:
-            new_node.next = self.top
-            self.top = new_node
-        self.height += 1
-        return True
-
-    def stack_pop(self):
-        if self.top == None:
-            return False
-        popped = self.top
-        if self.height == 1:
-            self.top = None
-        else:
-            self.top = popped.next
-            popped.next = None
-        self.height -= 1
-        return popped
-
-
 class Queue:
     def __init__(self, value):
         new_node = Node(value)
@@ -40,15 +11,22 @@ class Queue:
         self.last = new_node
         self.length = 1
 
+    def print_queue(self):
+        temp = self.first
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+
     def enqueue(self, value):
         new_node = Node(value)
-        if self.length == 0:
+        if self.first is None:
             self.first = new_node
             self.last = new_node
         else:
             self.last.next = new_node
             self.last = new_node
         self.length += 1
+        return True
 
     def dequeue(self):
         if self.first == None:
@@ -61,3 +39,24 @@ class Queue:
             self.first = self.first.next
         self.length -= 1
         return dequeued
+
+
+my_queue = Queue(1)
+my_queue.enqueue(2)
+
+# (2) Items - Returns 2 Node
+print(my_queue.dequeue().value)
+# (1) Item -  Returns 1 Node
+print(my_queue.dequeue().value)
+# (0) Items - Returns None
+print(my_queue.dequeue())
+
+
+"""
+    EXPECTED OUTPUT:
+    ----------------
+    1
+    2
+    None
+
+"""

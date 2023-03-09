@@ -18,7 +18,7 @@ class Stack:
 
     def push(self, value):
         new_node = Node(value)
-        if self.top == None:
+        if self.height == 0:
             self.top = new_node
         else:
             new_node.next = self.top
@@ -26,26 +26,49 @@ class Stack:
         self.height += 1
         return True
 
+    def pop(self):
+        if self.height == 0:
+            return None
+        popped = self.top
+        if self.height == 1:
+            self.top = None
+        else:
+            self.top = popped.next
+            popped.next = None
+        self.height -= 1
+        return popped
 
-my_stack = Stack(2)
 
-print('Stack before push(1):')
-my_stack.print_stack()
-
+my_stack = Stack(4)
+my_stack.push(3)
+my_stack.push(2)
 my_stack.push(1)
 
-print('\nStack after push(1):')
+print('Stack before pop():')
+my_stack.print_stack()
+
+print('\nPopped node:')
+print(my_stack.pop().value)
+
+print('\nStack after pop():')
 my_stack.print_stack()
 
 
 """
     EXPECTED OUTPUT:
     ----------------
-    Stack before push(1):
-    2
-
-    Stack after push(1):
+    Stack before pop():
     1
-    2   
+    2
+    3
+    4
+
+    Popped node:
+    1
+
+    Stack after pop():
+    2
+    3
+    4
 
 """
